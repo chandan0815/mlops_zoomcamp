@@ -33,8 +33,8 @@ def run_train(data_path: str):
 
 
 if __name__ == "__main__":
-    mlflow.set_experiment("NYC_Taxi_Duration_Prediction")
     mlflow.set_tracking_uri("sqlite:///mlruns.db")
+    mlflow.set_experiment("NYC_Taxi_Duration_Prediction")
     mlflow.sklearn.autolog()
 
     run_train()
